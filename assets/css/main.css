@@ -3226,19 +3226,13 @@ input, select, textarea {
 		z-index: 1;
 		overflow: hidden;
 		background-color: #212931;
-		background-image: url("../../images/overlay.png"), 
-						 linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), 
+		background-image: 
 						 url("../../images/Bagels.jpg");
-		background-size: auto, auto, cover;
+		background-size: cover;
 		background-position: center, center, center;
 		background-repeat: repeat, no-repeat, no-repeat;
 		background-attachment: fixed, fixed, fixed;
 	}
-
-		/* Remove the .bg div since we're not using parallax anymore */
-		#wrapper > .bg {
-			display: none;
-		}
 
 	
 
@@ -3259,8 +3253,8 @@ input, select, textarea {
 		/* Add mobile-specific styles */
 		@media screen and (max-width: 736px) {
 			#wrapper {
-				background-size: auto, auto, cover;
-				background-position: center, center, center 30%;
+				background-size: cover;
+				background-position: center 30%;
 				background-attachment: fixed, fixed, fixed;
 			}
 		}
@@ -3268,9 +3262,10 @@ input, select, textarea {
 		/* Additional styles for very small screens (425px and less) */
 		@media screen and (max-width: 425px) {
 			#wrapper {
-				background-size: auto, auto, cover;
-				background-position: center, center, center 15%;
+				background-size: cover !important;
+				background-position: center 15% !important;
 				background-attachment: fixed, fixed, fixed;
+				min-height: 100vh !important;
 				position: relative;
 				overflow: hidden;
 			}
