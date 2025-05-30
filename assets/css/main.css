@@ -3279,6 +3279,27 @@ input, select, textarea {
 			height: 100vh;
 		}
 
+		/* Add mobile-specific styles */
+		@media screen and (max-width: 736px) {
+			#wrapper {
+				background-size: auto, auto, cover;
+				background-position: center, center, center 30%;
+				background-attachment: fixed, fixed, fixed;
+			}
+		}
+
+		/* Additional styles for very small screens (425px and less) */
+		@media screen and (max-width: 425px) {
+			#wrapper {
+				background-size: auto, auto, 200% auto;
+				background-position: center, center, center 15%;
+				background-attachment: fixed, fixed, fixed;
+				min-height: 100vh;
+				position: relative;
+				overflow: hidden;
+			}
+		}
+
 /* Intro */
 
 	#intro {
@@ -4686,3 +4707,39 @@ input, select, textarea {
 		}
 
 	}
+
+@media screen and (max-width: 425px) {
+    #main {
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+        padding: 0;
+    }
+
+    #main > * {
+        padding: 2rem 2rem 0.1rem 2rem;
+    }
+
+    #footer {
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+        padding: 0;
+    }
+
+    #footer > section {
+        padding: 2rem 2rem 0.1rem 2rem;
+    }
+
+    #footer > section.split > section {
+        padding: 2rem 2rem 0.1rem 2rem;
+    }
+
+    #footer > section.split.contact > section {
+        padding: 2rem;
+    }
+
+    #copyright {
+        width: calc(100% - 2rem);
+        margin: 2rem 1rem;
+        padding: 0;
+    }
+}
