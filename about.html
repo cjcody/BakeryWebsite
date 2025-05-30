@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<!--
+	About Us Page for Cody's Sweet Treats
+-->
+<html>
+	<head>
+		<title>About Us - Cody's Sweet Treats</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.about-section {
+				margin-bottom: 4em;
+			}
+			.team-member {
+				text-align: center;
+				margin-bottom: 2em;
+			}
+			.team-member img {
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
+				object-fit: cover;
+				margin-bottom: 1em;
+			}
+			.values-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2em;
+				margin: 2em 0;
+			}
+			.value-card {
+				background: #f5f5f5;
+				padding: 2em;
+				border-radius: 8px;
+				text-align: center;
+			}
+			.value-card i {
+				font-size: 2.5em;
+				color: #18bfef;
+				margin-bottom: 0.5em;
+			}
+			.timeline {
+				position: relative;
+				max-width: 800px;
+				margin: 2em auto;
+			}
+			.timeline-item {
+				padding: 1em 0;
+				position: relative;
+				padding-left: 2em;
+			}
+			.timeline-item:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 2px;
+				background: #18bfef;
+			}
+			.timeline-item:after {
+				content: '';
+				position: absolute;
+				left: -4px;
+				top: 1.5em;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #18bfef;
+			}
+			.timeline-date {
+				font-weight: bold;
+				color: #18bfef;
+				margin-bottom: 0.5em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Cody's Sweet Treats</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="menu.html">Our Menu</a></li>
+							<li><a href="custom-orders.html">Custom Orders</a></li>
+							<li><a href="catering.html">Events & Catering</a></li>
+							<li class="active"><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h1>Our Story</h1>
+									<p>From a small home kitchen to Sweetville's favorite bakery,<br />
+									we've been crafting delicious memories since 2015.</p>
+								</header>
+							</article>
+
+						<!-- Our Story -->
+							<section class="about-section">
+								<h2>The Sweet Beginning</h2>
+								<p>What started as a passion project in Cody's home kitchen has blossomed into Sweetville's most beloved bakery. Our journey began in 2015 when Cody, a self-taught baker with a dream, started selling homemade cookies and cakes at local farmers' markets. The overwhelming positive response from the community inspired us to open our first storefront in 2017.</p>
+								
+								<div class="timeline">
+									<div class="timeline-item">
+										<div class="timeline-date">2015</div>
+										<h3>The Beginning</h3>
+										<p>Started baking from home and selling at local farmers' markets</p>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-date">2017</div>
+										<h3>First Storefront</h3>
+										<p>Opened our first bakery location in downtown Sweetville</p>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-date">2019</div>
+										<h3>Expansion</h3>
+										<p>Added our cafe section and expanded our menu</p>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-date">2021</div>
+										<h3>Community Recognition</h3>
+										<p>Voted "Best Bakery in Sweetville" by local readers</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Our Values -->
+							<section class="about-section">
+								<h2>Our Values</h2>
+								<p>At Cody's Sweet Treats, we believe in more than just making delicious baked goods. Our core values guide everything we do, from ingredient selection to customer service.</p>
+								
+								<div class="values-grid">
+									<div class="value-card">
+										<i class="icon solid fa-seedling"></i>
+										<h3>Quality Ingredients</h3>
+										<p>We source locally whenever possible and use only the finest ingredients in our recipes.</p>
+									</div>
+									<div class="value-card">
+										<i class="icon solid fa-heart"></i>
+										<h3>Made with Love</h3>
+										<p>Every item is crafted with care and attention to detail, just like we would make for our own family.</p>
+									</div>
+									<div class="value-card">
+										<i class="icon solid fa-leaf"></i>
+										<h3>Sustainability</h3>
+										<p>We're committed to eco-friendly practices and reducing our environmental footprint.</p>
+									</div>
+									<div class="value-card">
+										<i class="icon solid fa-users"></i>
+										<h3>Community</h3>
+										<p>We actively participate in local events and support community initiatives.</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Our Team -->
+							<section class="about-section">
+								<h2>Meet Our Team</h2>
+								<p>Our talented team of bakers, decorators, and baristas work together to create the perfect experience for our customers.</p>
+								
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<div class="team-member">
+											<img src="images/Cody.jpg" alt="Cody - Founder & Head Baker" />
+											<h3>Cody</h3>
+											<p>Founder & Head Baker</p>
+											<p>With over 10 years of baking experience, Cody leads our team with passion and creativity.</p>
+										</div>
+									</div>
+									<div class="col-6 col-12-small">
+										<div class="team-member">
+											<img src="images/Sarah.jpg" alt="Sarah - Pastry Chef" />
+											<h3>Sarah</h3>
+											<p>Pastry Chef</p>
+											<p>Specializing in French pastries, Sarah brings European techniques to our menu.</p>
+										</div>
+									</div>
+									<div class="col-6 col-12-small">
+										<div class="team-member">
+											<img src="images/Mike.jpg" alt="Mike - Cafe Manager" />
+											<h3>Mike</h3>
+											<p>Cafe Manager</p>
+											<p>Mike ensures every customer leaves with a smile and a perfect cup of coffee.</p>
+										</div>
+									</div>
+									<div class="col-6 col-12-small">
+										<div class="team-member">
+											<img src="images/Emma.jpg" alt="Emma - Decorator" />
+											<h3>Emma</h3>
+											<p>Decorator</p>
+											<p>Emma's artistic touch brings our cakes and pastries to life with beautiful designs.</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<!-- What Makes Us Special -->
+							<section class="about-section">
+								<h2>What Makes Us Special</h2>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<h3>Our Commitment to Quality</h3>
+										<ul>
+											<li>All bread is made fresh daily using our 100-year-old sourdough starter</li>
+											<li>We use locally sourced ingredients whenever possible</li>
+											<li>Our recipes are developed in-house and perfected over time</li>
+											<li>We offer a wide range of dietary options (vegan, gluten-free, nut-free)</li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-small">
+										<h3>Community Involvement</h3>
+										<ul>
+											<li>Weekly baking classes for kids and adults</li>
+											<li>Participation in local farmers' markets</li>
+											<li>Support for community events and charities</li>
+											<li>Partnerships with local schools and organizations</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h3>Join Our Team</h3>
+							<p>We're always looking for passionate individuals to join our team.<br />
+							If you love baking and creating memorable experiences, we'd love to hear from you!</p>
+							<ul class="actions">
+								<li><a href="contact.html" class="button">Apply Now</a></li>
+							</ul>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Visit Us</h3>
+								<p>123 Bakery Street<br />
+								Sweetville, CA 90210</p>
+							</section>
+							<section>
+								<h3>Hours</h3>
+								<p>Monday - Friday: 7am - 7pm<br />
+								Saturday: 8am - 6pm<br />
+								Sunday: 8am - 4pm</p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Cody's Sweet Treats</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html> 

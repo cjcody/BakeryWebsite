@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<!--
+	Contact Page for Cody's Sweet Treats
+-->
+<html>
+	<head>
+		<title>Contact Us - Cody's Sweet Treats</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.contact-section {
+				margin-bottom: 4em;
+			}
+			.contact-info {
+				background: #f5f5f5;
+				padding: 2em;
+				border-radius: 8px;
+				margin-bottom: 2em;
+			}
+			.contact-info i {
+				color: #18bfef;
+				margin-right: 0.5em;
+			}
+			.contact-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2em;
+				margin: 2em 0;
+			}
+			.map-container {
+				position: relative;
+				overflow: hidden;
+				padding-top: 56.25%; /* 16:9 Aspect Ratio */
+				margin: 2em 0;
+			}
+			.map-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+			.social-links {
+				display: flex;
+				gap: 1em;
+				margin-top: 1em;
+			}
+			.social-links a {
+				font-size: 1.5em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Cody's Sweet Treats</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="menu.html">Our Menu</a></li>
+							<li><a href="custom-orders.html">Custom Orders</a></li>
+							<li><a href="catering.html">Events & Catering</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li class="active"><a href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h1>Contact Us</h1>
+									<p>We'd love to hear from you! Whether you have a question about our menu,<br />
+									want to place a custom order, or just want to say hello, we're here for you.</p>
+								</header>
+							</article>
+
+						<!-- Contact Information -->
+							<section class="contact-section">
+								<div class="contact-grid">
+									<div class="contact-info">
+										<h2>Owner Contact</h2>
+										<p><i class="icon solid fa-user"></i> Cody Jennings</p>
+										<p style="margin-top: -1em; margin-bottom: 1em; color: #666;">Website Developer</p>
+										<p><i class="icon solid fa-envelope"></i> <a href="mailto:cody.jennings46@gmail.com">cody.jennings46@gmail.com</a></p>
+										<div class="social-links">
+											<a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+											<a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+										</div>
+									</div>
+									<div class="contact-info">
+										<h2>Visit Us</h2>
+										<p><i class="icon solid fa-map-marker-alt"></i> 123 Bakery Street<br />
+										Sweetville, CA 90210</p>
+										<p><i class="icon solid fa-phone"></i> (555) 123-4567</p>
+									</div>
+									<div class="contact-info">
+										<h2>Business Hours</h2>
+										<p><i class="icon solid fa-clock"></i> Monday - Friday: 7am - 7pm<br />
+										Saturday: 8am - 6pm<br />
+										Sunday: 8am - 4pm</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Contact Form -->
+							<section class="contact-section">
+								<h2>Send Us a Message</h2>
+								<form method="post" action="#" class="alt">
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="name" id="name" placeholder="Your Name" required />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="email" name="email" id="email" placeholder="Your Email" required />
+										</div>
+										<div class="col-12">
+											<input type="text" name="subject" id="subject" placeholder="Subject" required />
+										</div>
+										<div class="col-12">
+											<select name="inquiry-type" id="inquiry-type">
+												<option value="">- Inquiry Type -</option>
+												<option value="general">General Question</option>
+												<option value="custom-order">Custom Order</option>
+												<option value="catering">Catering</option>
+												<option value="feedback">Feedback</option>
+												<option value="other">Other</option>
+											</select>
+										</div>
+										<div class="col-12">
+											<textarea name="message" id="message" placeholder="Your Message" rows="6" required></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="primary" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+
+						<!-- Location Map -->
+							<section class="contact-section">
+								<h2>Find Us</h2>
+								<div class="map-container">
+									<!-- Replace the src with your actual Google Maps embed URL -->
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.71277937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDQ2LjAiTiA3NMKwMDAnMDkuNyJX!5e0!3m2!1sen!2sus!4v1645564759436!5m2!1sen!2sus" 
+										allowfullscreen="" loading="lazy"></iframe>
+								</div>
+							</section>
+
+						<!-- Additional Information -->
+							<section class="contact-section">
+								<h2>Additional Information</h2>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<h3>Custom Orders</h3>
+										<p>For custom orders, please contact us at least 48 hours in advance. For large orders or special events, we recommend reaching out at least one week ahead.</p>
+									</div>
+									<div class="col-6 col-12-small">
+										<h3>Catering Services</h3>
+										<p>We offer catering services for events of all sizes. Please contact us for a custom quote and to discuss your specific needs.</p>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h3>Quick Contact</h3>
+							<p>For immediate assistance, please call us at (555) 123-4567<br />
+							or email us at <a href="mailto:cody.jennings46@gmail.com">cody.jennings46@gmail.com</a></p>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Visit Us</h3>
+								<p>123 Bakery Street<br />
+								Sweetville, CA 90210</p>
+							</section>
+							<section>
+								<h3>Hours</h3>
+								<p>Monday - Friday: 7am - 7pm<br />
+								Saturday: 8am - 6pm<br />
+								Sunday: 8am - 4pm</p>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Cody's Sweet Treats</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html> 
