@@ -19,9 +19,7 @@
 		background-attachment: fixed, fixed, fixed;
 	}
 
-		#wrapper.fade-in:before {
-			display: none;
-		}
+
 
 /* Add mobile-specific styles */
 @media screen and (max-width: 736px) {
@@ -35,10 +33,9 @@
 /* Additional styles for very small screens (425px and less) */
 @media screen and (max-width: 425px) {
 	#wrapper {
-		background-size: auto, auto, 200% auto;
+		background-size: auto, auto, cover;
 		background-position: center, center, center 15%;
 		background-attachment: fixed, fixed, fixed;
-		min-height: 100vh;
 		position: relative;
 		overflow: hidden;
 	}
