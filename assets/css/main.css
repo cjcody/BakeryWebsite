@@ -3254,16 +3254,16 @@ input, select, textarea {
 			#wrapper {
 				background-size: cover !important;
 				background-position: center 30% !important;
-				background-attachment: fixed !important;
+				background-attachment: scroll !important; /* Disable parallax scrolling on mobile */
 			}
 		}
 
 		/* Additional styles for very small screens (425px and less) */
 		@media screen and (max-width: 425px) {
 			#wrapper {
-				background-size: cover !important;
-				background-position: center 15% !important;
-				background-attachment: fixed !important;
+				background-size: 200% !important;
+				background-position: center -1% !important;
+				/* Removed "background-attachment: fixed !important;" so that it inherits "scroll" from the above media query */
 				min-height: 100vh !important;
 				position: relative;
 				overflow: hidden;
@@ -3919,21 +3919,18 @@ input, select, textarea {
 
 			}
 
-		@media screen and (max-width: 736px) {
-
-			#main > * {
-				padding: 2rem 2rem 0.1rem 2rem ;
+			@media screen and (max-width: 736px) {
+				#main {
+					width: 100% !important;  /* full viewport width */
+					margin: 0 !important;    /* no margins */
+					max-width: none !important;  /* remove max-width restriction */
+					padding: 0 !important;   /* no padding */
+				}
+				
+				#main > * {
+					padding: 4rem 1rem 2rem 1rem;  /* adjust padding of children if needed */
+				}
 			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#main {
-				width: 100%;
-			}
-
-		}
 
 /* Footer */
 
@@ -4333,43 +4330,24 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-
-			#footer > section {
-				padding: 2rem 2rem 0.1rem 2rem ;
-			}
-
-				#footer > section.split > section {
-					padding: 2rem 2rem 0.1rem 2rem ;
-				}
-
-					#footer > section.split > section:first-child {
-						padding: 2rem 2rem 0.1rem 2rem ;
-					}
-
-					#footer > section.split > section:last-child {
-						padding: 2rem 2rem 0.1rem 2rem ;
-					}
-
-				#footer > section.split.contact > section {
-					padding: 2rem;
-				}
-
-					#footer > section.split.contact > section:first-child {
-						padding: 2rem;
-					}
-
-					#footer > section.split.contact > section:last-child {
-						padding: 2rem;
-					}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
 			#footer {
-				width: 100%;
+				width: 100% !important;  /* full viewport width */
+				margin: 0 !important;    /* no margins */
+				max-width: none !important;  /* remove max-width restriction */
+				padding: 0 !important;   /* no padding */
 			}
-
+			
+			#footer > section {
+				padding: 2rem 1rem 0.1rem 1rem;  /* adjust padding of sections */
+			}
+			
+			#footer > section.split > section {
+				padding: 2rem 1rem 0.1rem 1rem;  /* adjust padding of split sections */
+			}
+			
+			#footer > section.split.contact > section {
+				padding: 2rem 1rem;  /* adjust padding of contact sections */
+			}
 		}
 
 	#copyright {
@@ -4472,7 +4450,7 @@ input, select, textarea {
 				}
 
 		}
-
+		
 /* Nav Panel */
 
 	#navPanelToggle {
@@ -4711,5 +4689,30 @@ input, select, textarea {
         width: calc(100% - 2rem);
         margin: 2rem 1rem;
         padding: 0;
+    }
+}
+
+/* Default styles stay as they are (for mobile) */
+
+/* Add rectangle only for screens > 736px */
+@media screen and (min-width: 737px) {
+    #copyright {
+        color: #212931 !important;  /* black text */
+        background-color: #1e252d;  /* dark background */
+        padding: 1rem 2rem !important;  /* adds space inside the rectangle */
+        margin: 2rem auto !important;  /* keeps some space around the rectangle */
+        border-radius: 4px !important;  /* optional: rounds the corners */
+        width: fit-content !important;  /* makes rectangle only as wide as the text */
+    }
+}
+
+@media screen and (min-width: 737px) {
+    #copyright {
+        color: #ffffff !important;  /* white text */
+        background-color: #1e252d;  /* dark background */
+        padding: 1rem 2rem !important;  /* adds space inside the rectangle */
+        margin: 2rem auto !important;  /* keeps some space around the rectangle */
+        border-radius: 4px !important;  /* optional: rounds the corners */
+        width: fit-content !important;  /* makes rectangle only as wide as the text */
     }
 }

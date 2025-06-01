@@ -26,7 +26,7 @@
 	#wrapper {
 		background-size: auto, auto, cover !important;
 		background-position: center, center, center 30% !important;
-		background-attachment: fixed, fixed, fixed !important;
+		background-attachment: scroll, scroll, scroll !important; /* Disable parallax scrolling on mobile */
 	}
 }
 
@@ -35,7 +35,7 @@
 	#wrapper {
 		background-size: auto, auto, cover !important;
 		background-position: center, center, center 15% !important;
-		background-attachment: fixed, fixed, fixed !important;
+		/* Removed "background-attachment: fixed, fixed, fixed !important;" so that it inherits "scroll" from the above media query */
 		position: relative !important;
 		overflow: hidden !important;
 	}
