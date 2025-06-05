@@ -214,7 +214,7 @@
 						<!-- Catering Request Form -->
 							<section>
 								<h2>Request Catering Information</h2>
-								<form method="post" action="#">
+								<form method="post" action="#" id="cateringForm">
 									<div class="row gtr-uniform">
 										<div class="col-6 col-12-xsmall">
 											<input type="text" name="name" id="name" placeholder="Your Name" required />
@@ -258,7 +258,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form method="post" action="#" id="footerCateringForm">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -316,6 +316,43 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Custom Form Handler -->
+		<script>
+		// Function to handle form submission
+		function handleFormSubmit(formId, message) {
+			document.getElementById(formId).addEventListener('submit', function(e) {
+				e.preventDefault(); // Prevent the default form submission
+				
+				// Show thank you message
+				const formSection = this.closest('section');
+				const thankYouMessage = document.createElement('div');
+				thankYouMessage.style.textAlign = 'center';
+				thankYouMessage.style.padding = '2rem';
+				thankYouMessage.style.backgroundColor = '#f5f5f5';
+				thankYouMessage.style.borderRadius = '8px';
+				thankYouMessage.style.marginTop = '2rem';
+				thankYouMessage.innerHTML = `<h3>Thank You!</h3><p>${message}</p>`;
+				
+				// Clear the form
+				this.reset();
+				
+				// Insert thank you message after the form
+				formSection.appendChild(thankYouMessage);
+				
+				// Remove the thank you message after 5 seconds
+				setTimeout(() => {
+					thankYouMessage.remove();
+				}, 5000);
+			});
+		}
+
+		// Handle main catering form
+		handleFormSubmit('cateringForm', 'We have received your catering request and will get back to you soon to discuss your event details.');
+
+		// Handle footer form
+		handleFormSubmit('footerCateringForm', 'We have received your inquiry and will get back to you soon.');
+		</script>
 
 	</body>
 </html> 

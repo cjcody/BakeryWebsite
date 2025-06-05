@@ -100,7 +100,7 @@
 										<h2>Owner Contact</h2>
 										<p><i class="icon solid fa-user"></i> Cody Jennings</p>
 										<p style="margin-top: -1em; margin-bottom: 1em; color: #666;">Website Developer</p>
-										<p><i class="icon solid fa-envelope"></i> <a href="mailto:cody.jennings46@gmail.com">cody.jennings46@gmail.com</a></p>
+										<p><i class="icon solid fa-envelope"></i> <a href="mailto:codyjwebstudio@gmail.com">codyjwebstudio@gmail.com</a></p>
 										<div class="social-links">
 											<a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
 											<a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
@@ -124,7 +124,7 @@
 						<!-- Contact Form -->
 							<section class="contact-section">
 								<h2>Send Us a Message</h2>
-								<form method="post" action="#" class="alt">
+								<form method="post" action="#" class="alt" id="contactForm">
 									<div class="row gtr-uniform">
 										<div class="col-6 col-12-xsmall">
 											<input type="text" name="name" id="name" placeholder="Your Name" required />
@@ -222,6 +222,34 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Custom Form Handler -->
+		<script>
+		document.getElementById('contactForm').addEventListener('submit', function(e) {
+			e.preventDefault(); // Prevent the default form submission
+			
+			// Show thank you message
+			const formSection = this.closest('section');
+			const thankYouMessage = document.createElement('div');
+			thankYouMessage.style.textAlign = 'center';
+			thankYouMessage.style.padding = '2rem';
+			thankYouMessage.style.backgroundColor = '#f5f5f5';
+			thankYouMessage.style.borderRadius = '8px';
+			thankYouMessage.style.marginTop = '2rem';
+			thankYouMessage.innerHTML = '<h3>Thank You!</h3><p>We have received your message and will get back to you soon.</p>';
+			
+			// Clear the form
+			this.reset();
+			
+			// Insert thank you message after the form
+			formSection.appendChild(thankYouMessage);
+			
+			// Remove the thank you message after 5 seconds
+			setTimeout(() => {
+				thankYouMessage.remove();
+			}, 5000);
+		});
+		</script>
 
 	</body>
 </html> 
